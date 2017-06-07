@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-md-3 col-sm-3">
+      <div class="page-header">
+          <h2>Add product</h2>
+      </div>
+        <form ng-submit="createProduct()">
+            <div class="form-group">
+                <label for="new-product-name">Product Name</label>
+                <input type="text" class="form-control" id="new-product-name" ng-model="newProduct.name">
+            </div>
+            <div class="form-group">
+                <label for="new-product-url">Image (url)</label>
+                <input type="text" class="form-control" id="new-product-url" ng-model="newProduct.img">
+            </div>
+            <div class="form-group">
+                <label for="new-product-desc">Description</label>
+                <input type="text" class="form-control" id="new-product-desc" ng-model="newProduct.description">
+            </div>
+            <div class="form-group">
+                <label for="new-product-quantity">Initial Quantity</label>
+                <input type="text" class="form-control" id="new-product-quantity" ng-model="newProduct.quantity">
+            </div>
+            <button type="submit" class="btn btn-default btn-primary">Add product</button>
+        </form>
+    </div>
+    <div class="col-md-8 col-sm-8">
+        <div class="col-md-3 col-md-offset-1 col-sm-3 col-sm-offset-1 panel panel-primary product-panel" ng-repeat='product in products'>
+            <div class="panel-heading">
+                <h3 class="panel-title">{{product.name}} <span class='badge'>{{product.quantity}} left</span></h3>
+                <button type="button" class="btn btn-danger" ng-click='deleteProduct(product._id)'>X</button>
+            </div>
+            <div class="panel-body">
+                <img ng-show="product.img !== undefined" ng-src="{{product.img}}" alt="Product Image" class='thumbnail product-img'>
+            </div>
+        </div>
+
+    </div>
+</div>

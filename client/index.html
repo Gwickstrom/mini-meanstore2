@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="StoreModule">
+
+<head>
+    <meta charset="utf-8">
+    <title>Mini-MEAN Store</title>
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h1>Mini-MEAN Store <small>Coding Dojo</small></h1>
+        </div>
+        <div ng-include="'partials/_nav.html'"></div>
+        <div ng-view></div>
+    </div>
+
+
+
+    <script src="jquery/dist/jquery.js" charset="utf-8"></script>
+    <script src="bootstrap/dist/js/bootstrap.js" charset="utf-8"></script>
+    <script src="angular/angular.js" charset="utf-8"></script>
+    <script src="angular-route/angular-route.js" charset="utf-8"></script>
+    <script src="moment/moment.js" charset="utf-8"></script>
+    <script src="angular-moment/angular-moment.js" charset="utf-8"></script>
+    <script src="main.js" charset="utf-8"></script>
+    <script src="factories/storeFactory.js" charset="utf-8"></script>
+    <script src="controllers/idxCtrl.js" charset="utf-8"></script>
+    <script src="controllers/customerCtrl.js" charset="utf-8"></script>
+    <script src="controllers/productCtrl.js" charset="utf-8"></script>
+    <script src="controllers/orderCtrl.js" charset="utf-8"></script>
+</body>
+
+</html>

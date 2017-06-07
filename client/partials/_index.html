@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-md-3 col-sm-3">
+    <input type="text" class="form-control filter" placeholder="Filter products" ng-model='productFilter'>
+  </div>
+  <div class="col-md-8 col-sm-8">
+    <div class="row">
+      <div
+        class="col-md-3 col-md-offset-1 col-sm-3 col-sm-offset-1 panel panel-primary product-panel"
+        ng-repeat='product in products | filter:productFilter'
+        ng-show='$index < 6'>
+        <div class="panel-heading">
+            <h3 class="panel-title">{{product.name}} <span class='badge'>{{product.quantity}} left</span></h3>
+        </div>
+        <div class="panel-body">
+            <img ng-show="product.img !== undefined" ng-src="{{product.img}}" alt="Product Image" class='thumbnail product-img'>
+        </div>
+      </div>
+    </div>
+      <a class='col-md-offset-1 col-sm-offset-1' href="#!/products">Show more...</a>
+      <div class="page-header">
+          <h2>Recent orders</h2>
+          <ul>
+            <li ng-repeat='order in recentOrders track by $index'>
+              <p>{{order._customer.name}} purchased {{ order.quantity }} {{ order._product.name }}... <span am-time-ago="order.created_at | amParse:'YYYY.MM.DD HH:mm:ss'"></span></p>
+            </li>
+          </ul>
+          <a href="#!/orders">show all orders...</a>
+      </div>
+      <div class="page-header">
+          <h2>New customers</h2>
+          <ul>
+            <li ng-repeat='customer in recentCustomers track by $index'>
+              <p>{{customer.name}} joined <span am-time-ago="customer.created_at | amParse:'YYYY.MM.DD HH:mm:ss'"></span></p>
+            </li>
+          </ul>
+          <a href="/#!customers">show all customers...</a>
+      </div>
+  </div>
+</div>

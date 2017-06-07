@@ -1,0 +1,31 @@
+<h1>Customers</h1>
+<div class="row">
+  <div class="col-md-4 col-md-offset-3">
+    <h2>Add customer</h2>
+    <form ng-submit="createCustomer()" class="form-inline">
+      <div class="form-group">
+        <label for="customerName">Name</label>
+        <input type="text" class="form-control" id="customerName" ng-model="newCustomer.name">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>
+<div class="row">
+  <table class="table table-hover customer">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Created Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat='customer in customers'>
+        <td>{{customer.name}}</td>
+        <td>{{customer.created_at | date: "MMM. dd, yyyy"}}</td>
+        <td><button class='btn btn-danger' ng-click="deleteCustomer(customer._id)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

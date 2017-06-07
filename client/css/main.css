@@ -1,0 +1,20 @@
+html {
+  box-sizing: border-box;
+}
+
+.product-panel {
+  height: 175px;
+  overflow: scroll;
+}
+
+.panel-body img {
+  width: 100%;
+}
+
+table.customer {
+  margin-top: 40px;
+}
+
+input.filter {
+  margin-top: 40px;
+}
