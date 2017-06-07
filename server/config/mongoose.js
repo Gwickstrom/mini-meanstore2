@@ -8,7 +8,7 @@ var mongoose = require('mongoose'),
 mongoose.Promise = global.Promise;
 
 // connect
-mongoose.connect( 'mongodb://localhost/miniMEANstore' );
+mongoose.connect( 'mongodb://admin:admin@ds145148.mlab.com:45148/mini-meanstore2' );
 // load any models
 
 fs.readdirSync( models_path ).forEach( function( file ) {
