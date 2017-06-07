@@ -8,7 +8,7 @@ var mongoose = require('mongoose'),
 mongoose.Promise = global.Promise;
 
 // connect
-mongoose.connect( 'mongodb://admin:admin@ds145148.mlab.com:45148/mini-meanstore2' );
+mongoose.connect( 'mongodb://admin:admin@ds145148.mlab.com:45148/heroku_3bwcfv72' );
 // load any models
 
 fs.readdirSync( models_path ).forEach( function( file ) {
