@@ -3,6 +3,17 @@ var express = require('express'),
     port = 8000;
 
 var app = express();
+var mongodb = require('mongodb');
+mongoClient = mongodb.MongoClient,
+ObjectID = mongodb.ObjectID, // Used in API endpoints
+db; // We'll initialize connection below
+var MONGODB_URI = process.env.MONGODB_URI;
+mongoClient.connect(MONGODB_URI, function (err, database) {
+if (err) {
+process.exit(1);
+}
+db = heroku_3bwcfv72; // Our database object from mLab
+console.log("Database connection ready");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
