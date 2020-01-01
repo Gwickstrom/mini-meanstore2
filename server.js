@@ -4,7 +4,7 @@ const angular = require('@bower_components/angular'),
       boostrap = require("@bower_components/bootstrap"),
       jquery = require("@bower_components/jquery"),
       moment = require("@bower_components/moment");
-// added above when switch from bower to yarns bower-away, deleted bower_components, bowerrc and bower files, moved @bower_components from node_modules to git folder. Moved all the @bower_components dependencies to the comments section in package.json
+// added above when switch from bower to yarns bower-away, deleted bower_components, bower.json, bowerrc and bower files, moved @bower_components from node_modules to git folder. Moved all the @bower_components dependencies to the comments section in package.json
 const express = require('express'),
     bodyParser = require('body-parser'),
     port = 8000;
