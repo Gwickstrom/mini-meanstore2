@@ -1,13 +1,22 @@
-var express = require('express'),
+const angular = require('@bower_components/angular'),
+      angular_moment = require("@bower_components/angular-moment"),
+      angular_route = require("@bower_components/angular-route"),
+      boostrap = require("@bower_components/bootstrap"),
+      jquery = require("@bower_components/jquery"),
+      moment = require("@bower_components/moment");
+
+const express = require('express'),
     bodyParser = require('body-parser'),
     port = 8000;
 
-var app = express();
+const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/client'));
-app.use(express.static(__dirname + '/bower_components'));
+// BELOW switched from bower to yarn/ have to add the
+// const angular = require('@bower_components/angular') here
+// app.use(express.static(__dirname + '/bower_components'));
 
 // Just a bit of middleware to print every route request to the console...
 app.use( function(req, res, next){
