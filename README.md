@@ -2,7 +2,7 @@
 
 ## Summary
 
-The mini-meanstore is a coding dojo project that I have adapted with bootstrap to give it some color and a few addons.
+The mini-meanstore is a CodingDojo project that I have adapted with bootstrap to give it some color and a few addons.
 
 ## Purpose of the project
 

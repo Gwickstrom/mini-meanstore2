@@ -31,9 +31,10 @@
     "SWITCHED FROM BOWER TO YARN USING BOWER-AWAY",
     "NEED TO GET NPM INSTALL WORKING WITH @BOWER dependencies"
   ],
+   "_comment": "Note that most of these, if not all, are deprecated",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "bower": "^1.8.8",
+    "body-parser": "~1.19.0",
+    "bower": "~1.8.8",
     "express": "^4.17.1",
     "mongodb": "^3.4.1",
     "mongoose": ">=5.7.5"

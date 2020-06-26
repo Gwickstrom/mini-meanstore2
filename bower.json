@@ -1,7 +1,7 @@
 {
   "name": "mini-meanstore",
   "authors": [
-    "Gregory Wickstrom <gwick001@ucr.edu>"
+      Greg
   ],
   "description": "",
   "main": "",
@@ -14,10 +14,11 @@
     "test",
     "tests"
   ],
+  "_comment": "Note that most of these, if not all, are deprecated",
   "dependencies": {
     "angular": "^1.6.3",
     "angular-route": "^1.6.3",
-    "bootstrap": "^3.3.7",
-    "angular-moment": "^1.0.1"
+    "bootstrap": "~3.3.7",
+    "angular-moment": "~1.0.1"
   }
 }
