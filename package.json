@@ -36,7 +36,7 @@
     "bower": "^1.8.8",
     "express": "^4.17.1",
     "mongodb": "^3.4.1",
-    "mongoose": "^5.8.3"
+    "mongoose": ">=5.7.5"
   },
   "engines": {
     "yarn": ">= 1.0.0"
